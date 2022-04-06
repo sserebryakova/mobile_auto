@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 @Listeners(AllureListener.class)
 public class CheckActiveButtonWidgetTest extends BaseTest {
-   // public static final String ACTIVE_BUTTON = "This button is аctive";
 
     @Test
     @Description("Проверяем появление виджета при клике на кнопку 'аctive'")

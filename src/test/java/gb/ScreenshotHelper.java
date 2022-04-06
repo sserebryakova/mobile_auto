@@ -12,7 +12,8 @@ public class ScreenshotHelper extends BaseTest {
 
     @Test
     public void createScreen() {
-        openApp();
-        File actualScreenshot = $(MobileBy.AccessibilityId("Home-screen")).screenshot();
+        openApp()
+                .clickLoginMenuButton();
+        File actualScreenshot = $(MobileBy.AccessibilityId("Login-screen")).screenshot();
     }
 }

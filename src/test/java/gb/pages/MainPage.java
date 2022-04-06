@@ -60,7 +60,7 @@ public class MainPage {
         BufferedImage actualImage = ImageComparisonUtil.readImageFromResources("screenshots/actual/" + actualScreenshot.getName());
 
         // Где будем хранить скриншот с различиями в случае падения теста.
-        File resultDestination = new File("diff/diff_CheckFailMainPageScreenshot.png");
+        File resultDestination = new File("diff/diff_CheckMainPageScreenshot.png");
 
         // Сравниваем.
         ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage, resultDestination).compareImages();

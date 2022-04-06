@@ -11,8 +11,4 @@ public class FormsPageLocators {
     public By activeButtonWidget() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout");
     }
-
-    public By homeScreen() {
-        return MobileBy.AccessibilityId("Home-screen");
-    }
 }

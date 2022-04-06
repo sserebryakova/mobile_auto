@@ -12,4 +12,8 @@ public class LoginPageLocators {
         return MobileBy.xpath("//android.widget.ScrollView[@content-desc=\"Login-screen\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView[1]");
     }
 
+    public By loginScreen() {
+        return MobileBy.AccessibilityId("Login-screen");
+    }
+
 }
