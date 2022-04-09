@@ -6,7 +6,7 @@ import com.github.romankh3.image.comparison.model.ImageComparisonResult;
 import com.github.romankh3.image.comparison.model.ImageComparisonState;
 import io.qameta.allure.Step;
 import gb.locators.MainPageLocators;
-import gb.pages.LoginPage;
+
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -60,11 +60,12 @@ public class MainPage {
         BufferedImage actualImage = ImageComparisonUtil.readImageFromResources("screenshots/actual/" + actualScreenshot.getName());
 
         // Где будем хранить скриншот с различиями в случае падения теста.
-        File resultDestination = new File("diff/diff_CheckMainPageScreenshot.png");
+        File resultDestination = new File("diff/diff_CheckFailMainPageScreenshot.png");
 
         // Сравниваем.
         ImageComparisonResult imageComparisonResult = new ImageComparison(expectedImage, actualImage, resultDestination).compareImages();
         assertEquals(ImageComparisonState.MATCH, imageComparisonResult.getImageComparisonState());
         return this;
+
     }
 }
