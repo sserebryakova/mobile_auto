@@ -4,8 +4,9 @@ import com.github.romankh3.image.comparison.ImageComparison;
 import com.github.romankh3.image.comparison.ImageComparisonUtil;
 import com.github.romankh3.image.comparison.model.ImageComparisonResult;
 import com.github.romankh3.image.comparison.model.ImageComparisonState;
+import gb.locators.LocatorService;
+import gb.locators.interfaces.MainPageLocators;
 import io.qameta.allure.Step;
-import gb.locators.MainPageLocators;
 
 
 import java.awt.image.BufferedImage;
@@ -18,8 +19,9 @@ public class MainPage {
 
     // Метод позволяет нам работать с локаторами для нужной нам страницы.
     private MainPageLocators locator() {
-        return new MainPageLocators();
+        return LocatorService.MAIN_PAGE_LOCATORS;
     }
+
 
     @Step("Кликаем по кнопке логина в меню и переходим на новую страницу логина")
     public LoginPage clickLoginMenuButton() {
@@ -30,6 +32,11 @@ public class MainPage {
     public FormsPage clickFormsButton() {
         $(locator().formsButton()).click();
         return new FormsPage();
+    }
+    @Step("Кликаем по кнопке 'Swipe' в меню и переходим на новую страницу 'Swipe'")
+    public SwipePage clickSwipeButton() {
+        $(locator().swipeButton()).click();
+        return new SwipePage();
     }
     @Step("Делаем скриншот главной страницы и сравниваем с требованием.")
     public MainPage checkScreenshot() {
