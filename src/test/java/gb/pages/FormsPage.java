@@ -1,13 +1,14 @@
 package gb.pages;
 
-import gb.locators.FormsPageLocators;
+import gb.locators.LocatorService;
+import gb.locators.interfaces.FormsPageLocators;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class FormsPage {
     private FormsPageLocators locator() {
-        return new FormsPageLocators();
+        return LocatorService.FORMS_PAGE_LOCATORS;
     }
 
 
